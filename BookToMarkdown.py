@@ -24,7 +24,7 @@ def generateMarkdown(jsonData):
     with open(OutputFile, 'a') as f:
         for book in books:
             # Title
-            f.write("## [{}]({})\n".format(book["title"], book["url"]));
+            f.write("## [{}]({})\n".format(book["title"], book["alt"]));
             # Image
             f.write("<img src={} width='20%' height='20%'>\n".format(book["image"]));
             # Id

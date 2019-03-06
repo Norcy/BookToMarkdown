@@ -3,7 +3,7 @@
 
 ## 使用方法
 ```shell
-BookToMarkdown.py (-i | -n) -o [-c] [id]
+BookToMarkdown.py (-i | -n) -o [-c] [--id]
 ```
 
 有 2 种搜索模式，一种是根据名称进行模糊搜索，另一种是根据 id 进行精确搜索
@@ -18,7 +18,7 @@ BookToMarkdown.py (-i | -n) -o [-c] [id]
 
 `-c`：即 count，如果是根据名称搜索，该字段指定搜索豆瓣的前 count 条结果，默认为 1，选填
 
-`id`：根据 id 进行搜索，选填
+`--id`：根据 id 进行搜索，选填
 
 ## 例子
 ```
