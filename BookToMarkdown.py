@@ -17,19 +17,20 @@ QueryById = False
 
 def generateMarkdown(jsonData):
     if QueryById:
-        book = jsonData
+        books = [jsonData]
     else:
-        book = jsonData["books"][0]
+        books = jsonData["books"]
 
     with open(OutputFile, 'a') as f:
-        # Title
-        f.write("## [{}]({})\n".format(book["title"], book["url"]));
-        # Image
-        f.write("<img src={} width='20%' height='20%'>\n".format(book["image"]));
-        # Id
-        # f.write("{}\n".format(book["id"]));
-        # newLine
-        f.write("\n")
+        for book in books:
+            # Title
+            f.write("## [{}]({})\n".format(book["title"], book["url"]));
+            # Image
+            f.write("<img src={} width='20%' height='20%'>\n".format(book["image"]));
+            # Id
+            # f.write("{}\n".format(book["id"]));
+            # newLine
+            f.write("\n")
 
 def requestData(url):
     r = requests.get(url)
@@ -37,7 +38,7 @@ def requestData(url):
     return r.json()
 
 def printUsage():
-    print('usage: BookToMarkdown.py (-i inputfile | -n bookName) -o output.md [-c]')
+    print('usage: BookToMarkdown.py (-i | -n) -o output.md [-c]')
 
 def getBookNames(argv):
     inputfile = ''
