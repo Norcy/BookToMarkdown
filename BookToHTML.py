@@ -30,7 +30,7 @@ def generateHTML(originBooks):
         # pprint(book)
         books.append({'title':book['title'], 'subtitle': '', 'image': book['image'], 'time': book['myTime']})
     with open(OutputFile, 'w') as f:
-        f.write(template.render(books=books, mainTitle="2018 年阅读记录"))
+        f.write(template.render(books=books, mainTitle="2020's Reading Challenge"))
 
 def requestData(url):
     user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.103 Safari/537.36"
