@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  
+  <head>
+    <meta http-equiv='Content-Type' content='text/html; charset=UTF-8'>
+    <meta content='IE=edge,chrome=1' http-equiv='X-UA-Compatible'>
+    <meta content='webkit|ie-comp|ie-stand' name='renderer'>
+    <meta content='width=device-width,initial-scale=1' name='viewport'>
+    <meta name='mobile-web-app-capable' content='yes'>
+    <meta name='apple-mobile-web-app-capable' content='yes'>
+    <meta name='application-name' content='2018 年我的阅读记录'>
+    <meta name='apple-mobile-web-app-status-bar-style' content='white'>
+    <meta name='apple-mobile-web-app-title' content='2018 年我的阅读记录'>
+    <meta content='never' name='referrer'>
+    <meta content='telephone=no,email=no' name='format-detection'>
+    <link href='./book.css' rel='stylesheet'></head>
+    <title>{{mainTitle}}</title>
+  <body>
+    <div id='root'>
+      <section>
+        <div class='container'>
+          <h1 class="mainTitle">{{mainTitle}}</h1>
+          <div class='content'>
+            <div class='item-list'>
+              <ul class='item-ul'>
+                
+                {% for book in books %}
+                  <li class='item-li'>
+                    <div class='item'>
+                      <div class='item-cover'>
+                        <img class='item-cover-img' src='{{book.image}}'>
+                        <div class="marklabel">{{book.time}}</div> 
+                      </div>
+                      <div class='item-footer'>
+                        <div class='item-info'>
+                          <div class='item-title'>{{book.title}}</div>
+                          <!-- <div class='item-subtitle'>{{book.subtitle}}</div> -->
+                        </div>
+                      </div>
+                   </li>
+                {% endfor %}
+                
+
+
+              </ul>
+              </div>
+              </div>
+              </div>
+      </section>
+      </div>
+  </body>
+
+</html>
