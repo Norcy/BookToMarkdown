@@ -35,3 +35,5 @@ DoubanBookIdApi = 'https://api.douban.com/v2/book/{}'
 # 搜索指定用户的收藏（想看/在看/已看）
 DoubanBookUserApi = 'https://api.douban.com/v2/book/user/{}/collections?count={}'
 ```
+
+豆瓣更改了 API 接口，BookToMarkdown 暂时失效，得同 BookToHTML 一样，添加 apikey
