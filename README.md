@@ -1,6 +1,8 @@
 # BookToMarkdown
 根据书名从豆瓣爬虫转化为 markdown
 
+最新状态：**可怜的豆瓣 API 已失效，可以使用解析 HTML 的方式来抓取数据，详见 douban.py**
+
 # Demo
 + [我的 2018 阅读记录](https://norcy.xyz/Me/2018_book.html)
 + [我的 2019 阅读记录](https://norcy.xyz/Me/2019_book.html)
